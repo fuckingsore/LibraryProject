@@ -1,0 +1,20 @@
+<div class="form-froup row">
+    <label style="color: darkorchid;" class="col-sm-2 col-form-label">UserId</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="userId"
+        placeholder="Enter First Name">
+    </div>
+    <label style="color: darkorchid;" class="col-sm-2 col-form-label">BookId</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="bookId"
+        placeholder="Enter Surname">
+    </div>
+</div>
+
+<button (click)="addOrder()" *ngIf="Order.orderId==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateOrder()" *ngIf="Order.orderId!=0" class="btn btn-primary">
+    Update
+</button>

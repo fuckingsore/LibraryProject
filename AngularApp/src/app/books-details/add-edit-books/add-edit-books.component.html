@@ -1,0 +1,25 @@
+<div class="form-froup row">
+    <label style="color: darkorchid;" class="col-sm-2 col-form-label">Book Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="name"
+        placeholder="Enter Genre Name">
+    </div>
+    <label style="color: darkorchid;" class="col-sm-2 col-form-label">Author</label>
+    <div class="col-sm-10">
+        <input type="number" class="form-control" [(ngModel)]="authorId"
+        placeholder="Enter Author Id">
+    </div>
+    <label style="color: darkorchid;" class="col-sm-2 col-form-label">Genre</label>
+    <div class="col-sm-10">
+        <input type="number" class="form-control" [(ngModel)]="genreId"
+        placeholder="Enter Genre Id">
+    </div>
+</div>
+
+<button (click)="addBook()" *ngIf="Book.bookId==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateBook()" *ngIf="Book.bookId!=0" class="btn btn-primary">
+    Update
+</button>
