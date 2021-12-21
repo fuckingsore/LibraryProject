@@ -22,12 +22,11 @@ namespace BLL.Services.Implementations
         {
             try
             {
-
                 Order orderEntity = new Order()
                 {
                     OrderId = entity.OrderId,
                     UserId = entity.UserId,
-                    BookId = entity.BookId
+                    BookId = int.Parse(entity.BookId)
                 };
                 db.Orders.Add(orderEntity);
             }
@@ -47,7 +46,7 @@ namespace BLL.Services.Implementations
                 {
                     OrderId = (int)entity.OrderId,
                     UserId = (int)entity.UserId,
-                    BookId = (int)entity.BookId
+                    BookId = entity.BookId.ToString()
                 };
                 return orderDTO;
             }
@@ -103,7 +102,7 @@ namespace BLL.Services.Implementations
                 {
                     OrderId = entity.OrderId,
                     UserId = entity.UserId,
-                    BookId = entity.BookId
+                    BookId = int.Parse(entity.BookId)
                 };
                 db.Orders.Update(orderEntity, id);
             }

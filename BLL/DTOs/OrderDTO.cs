@@ -8,6 +8,6 @@ namespace BLL.DTOs
     {
         public int OrderId { get; set; }
         public int UserId { get; set; }
-        public int BookId { get; set; }
+        public string BookId { get; set; }
     }
 }

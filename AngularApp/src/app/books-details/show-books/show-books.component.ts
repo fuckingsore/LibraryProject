@@ -60,7 +60,7 @@ export class ShowBooksComponent implements OnInit {
 
 
   refreshBookList(){
-    this.service.getGenresList().subscribe(data=>{
+    this.service.getBooksList().subscribe(data=>{
       this.BookList=data;
       this.BookListWithoutFilter=data;
     });
